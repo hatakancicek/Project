@@ -1,0 +1,18 @@
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class Navigate : MonoBehaviour {
+    public int SceneNumber;
+
+    void NavigatePlaySceene()
+    {
+        SceneManager.LoadScene(SceneNumber);
+    }
+
+    private void Start()
+    {
+        Button button = gameObject.GetComponent<Button>();
+        button.onClick.AddListener(NavigatePlaySceene);
+    }
+}
