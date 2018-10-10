@@ -304,7 +304,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 2
-  m_Text: "\u0130\u015ELEMLER"
+  m_Text: "\xD6L\xC7\xDCMLER"
 --- !u!222 &74720177
 CanvasRenderer:
   m_ObjectHideFlags: 0
