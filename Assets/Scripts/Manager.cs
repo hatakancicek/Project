@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Level {
     public int order;
@@ -34,10 +35,8 @@ public class Manager : MonoBehaviour {
     public Image achievementIcon;
     public Animator anim;
     static Manager instance;
+    public AchievementWrapper[] achievementWrappers;
 
-
-    public Sprite backgroundImageF;
-    public Sprite achievementIconF;
 
     private void Awake()
     {
@@ -65,17 +64,34 @@ public class Manager : MonoBehaviour {
         SceneManager.LoadScene(1);
         Sound.instance.GetComponent<AudioSource>().mute |= sound != 1;
 
-        Invoke("ShowFirstGameNotification", 2);
+        OpenAchievement("n", "first");
     }
 
-    void ShowFirstGameNotification() {
-        ShowAchievement(backgroundImageF, achievementIconF, "İlk Oyunu Tamamladın!");
-    }
+    void OpenAchievement(string _subject, string _id) {
+        string[] _achievements = Manager.achievements.achievements;
+        string target = _subject + "_" + _id;
+        for (int i = 0; i < _achievements.Length; i++) {
+            string _achievement = _achievements[i];
+            if (_achievement == target)
+                return;
+        }
 
-    void ShowAchievement(Sprite background, Sprite achievement, string description) {
-        descriptionText.text = description;
-        backgroundImage.sprite = background;
-        achievementIcon.sprite = achievement;
-        anim.SetTrigger("Show");
+        Array.Resize(ref _achievements, _achievements.Length + 1);
+        _achievements[_achievements.GetUpperBound(0)] = target;
+
+        Manager.achievements.achievements = _achievements;
+        PlayerPrefs.SetString("achievements", JsonUtility.ToJson(Manager.achievements));
+
+        print(JsonUtility.ToJson(Manager.achievements));
+
+        for (int i = 0; i < achievementWrappers.Length; i++) {
+            AchievementWrapper _a = achievementWrappers[i];
+            if(_a.subject == _subject && _a.id == _id) {
+                descriptionText.text = _a.description;
+                backgroundImage.sprite = _a.background;
+                achievementIcon.sprite = _a.icon;
+                anim.SetTrigger("Show");
+            }
+        }
     }
 }

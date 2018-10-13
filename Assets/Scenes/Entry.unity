@@ -148,7 +148,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357212954}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -171,8 +171,22 @@ MonoBehaviour:
   backgroundImage: {fileID: 620883002}
   achievementIcon: {fileID: 2016299292}
   anim: {fileID: 620883001}
-  backgroundImageF: {fileID: 21300004, guid: 61ad2efec602ac34eb709c6338e9d84b, type: 3}
-  achievementIconF: {fileID: 21300296, guid: 66e9c80335fb4584e9bb6f0319900f4b, type: 3}
+  achievementWrappers:
+  - {fileID: 114756110480335196, guid: a761448f935074f6bab412e6c9aab46f, type: 2}
+  - {fileID: 114949247293585190, guid: 59cdc63ab5bec4b18a93a8fb6c213c3a, type: 2}
+  - {fileID: 114603344155644036, guid: eac45faf13e8d499a83d3c83b975db8a, type: 2}
+  - {fileID: 114513282960065212, guid: af2a80d2feb4e405384b5197e82f9628, type: 2}
+  - {fileID: 114900518601099450, guid: e15aabff709a24887ad4e19300846656, type: 2}
+  - {fileID: 114352528597305276, guid: 5bf16b48553874e169c15dd30de5cc0c, type: 2}
+  - {fileID: 114741989954186874, guid: 7e85516fc8e1b43b1bee2f2765f45ba4, type: 2}
+  - {fileID: 114800450951575720, guid: e50518f58d474485b9ffd5fbb981a861, type: 2}
+  - {fileID: 114460174155302232, guid: e07c80fc114ed4e0e9c756bec76cce21, type: 2}
+  - {fileID: 114097409988546782, guid: 597a91154e1204cef8456e5e8273d235, type: 2}
+  - {fileID: 114119477003320490, guid: 3dc0141cdd67b4e7b891db6321ec189e, type: 2}
+  - {fileID: 114474631827243580, guid: 1427451e9628a4db089deda605b2af19, type: 2}
+  - {fileID: 114765169697948744, guid: 54bf26df1d15f4120b8a89cb799e9e04, type: 2}
+  - {fileID: 114516554686013608, guid: 873fc7a90ff544e0fa6e6d5ddb787490, type: 2}
+  - {fileID: 114173904501998048, guid: 918eedcc2ec8f483493a6de323f2188f, type: 2}
 --- !u!212 &357212958
 SpriteRenderer:
   m_ObjectHideFlags: 0
