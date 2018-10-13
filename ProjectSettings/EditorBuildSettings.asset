@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Yeni.unity
     guid: 344270e03b01d7246827108fce8b6aff
+  - enabled: 1
+    path: Assets/Scenes/Some.unity
+    guid: 54c5540dbcbbbe742b8cd86b49c56029
   m_configObjects: {}
