@@ -60,6 +60,7 @@ MonoBehaviour:
   tier: 0
   numberOfLevels: 3
   tierLevels: {fileID: 1449219459222334, guid: 130c9a759c75944009900544ea815fe7, type: 2}
+  onDone: {fileID: 12800000, guid: 301a63ff8379a417082918920a04f597, type: 3}
 --- !u!114 &114539602735327302
 MonoBehaviour:
   m_ObjectHideFlags: 1

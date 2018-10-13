@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Level {
@@ -28,9 +29,23 @@ public class Manager : MonoBehaviour {
     public static Achievements achievements;
     public static Levels levels;
     public static string subject;
+    public Text descriptionText;
+    public Image backgroundImage;
+    public Image achievementIcon;
+    public Animator anim;
+    static Manager instance;
 
-	// Use this for initialization
-	void Start () {
+
+    public Sprite backgroundImageF;
+    public Sprite achievementIconF;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    // Use this for initialization
+    void Start () {
         sound = PlayerPrefs.GetInt("sound", 0);
 
         string _achievements = PlayerPrefs.GetString("achievements", "{\"achievements\":[]}");
@@ -49,5 +64,18 @@ public class Manager : MonoBehaviour {
 
         SceneManager.LoadScene(1);
         Sound.instance.GetComponent<AudioSource>().mute |= sound != 1;
+
+        Invoke("ShowFirstGameNotification", 2);
+    }
+
+    void ShowFirstGameNotification() {
+        ShowAchievement(backgroundImageF, achievementIconF, "İlk Oyunu Tamamladın!");
+    }
+
+    void ShowAchievement(Sprite background, Sprite achievement, string description) {
+        descriptionText.text = description;
+        backgroundImage.sprite = background;
+        achievementIcon.sprite = achievement;
+        anim.SetTrigger("Show");
     }
 }
