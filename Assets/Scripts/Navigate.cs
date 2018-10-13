@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class Navigate : MonoBehaviour {
     public int SceneNumber;
+    public string subject;
 
     void NavigatePlaySceene()
     {
+        if (subject != "") Manager.subject = subject;
         SceneManager.LoadScene(SceneNumber);
     }
 

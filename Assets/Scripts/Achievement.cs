@@ -24,8 +24,6 @@ public class Achievement : MonoBehaviour {
             }
         }
 
-        print(isUnlocked);
-
         gameObject.GetComponent<SpriteRenderer>().sprite = isUnlocked ? unlocked : locked;
 	}
 

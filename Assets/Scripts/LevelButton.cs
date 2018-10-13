@@ -14,7 +14,7 @@ public class LevelButton : MonoBehaviour {
         Image image = gameObject.GetComponent<Image>();
         Text text = transform.GetChild(0).GetComponent<Text>();
         StarManager stars = transform.GetChild(1).GetComponent<StarManager>();
-        Level level = new Level(order, tier, 0);
+        Level level = new Level(order, tier, 0, Manager.subject);
         bool locked = true;
         Level[] levels = Manager.levels.levels;
         int levelsLength = levels.Length;
@@ -27,13 +27,26 @@ public class LevelButton : MonoBehaviour {
                 for (int i = 0; i < levelsLength; i++)
                 {
                     Level _level = levels[i];
-                    if (_level.order == previousLevelOrder)
+                    if (_level.order == previousLevelOrder
+                        && _level.tier == tier
+                        && _level.subject == Manager.subject)
                     {
                         locked = false;
-                    } else if(_level.order == order && _level.tier == tier) {
-                        level = _level;
                     }
                 }
+            }
+        }
+
+
+        for (int i = 0; i < levelsLength; i++)
+        {
+            Level _level = levels[i];
+
+            if (_level.order == order
+              && _level.tier == tier
+              && _level.subject == Manager.subject)
+            {
+                level = _level;
             }
         }
 

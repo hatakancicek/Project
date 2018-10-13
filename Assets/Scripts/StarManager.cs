@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class StarManager : MonoBehaviour {
 
     Image[] stars;
-    int lives;
+    public int lives;
     int total;
 
     readonly Color32 lostStar = new Color32(133, 90, 90, 255);

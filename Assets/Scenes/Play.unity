@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNumber: 1
+  subject: 
 --- !u!1 &74720174
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNumber: 1
+  subject: 
 --- !u!114 &255783585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +629,7 @@ GameObject:
   - component: {fileID: 786621245}
   - component: {fileID: 786621244}
   - component: {fileID: 786621243}
+  - component: {fileID: 786621242}
   m_Layer: 5
   m_Name: Numbers
   m_TagString: Untagged
@@ -653,6 +656,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 164}
   m_SizeDelta: {x: 514, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &786621242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786621240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b126f9e34f974d169ca87e45dc40103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneNumber: 6
+  subject: n
 --- !u!114 &786621243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,6 +869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNumber: 4
+  subject: a
 --- !u!114 &1611322401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNumber: 5
+  subject: g
 --- !u!114 &1891821435
 MonoBehaviour:
   m_ObjectHideFlags: 0

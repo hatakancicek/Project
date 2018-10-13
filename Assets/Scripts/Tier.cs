@@ -8,6 +8,7 @@ public class Tier : MonoBehaviour {
     public int tier;
     public int numberOfLevels = 3;
     public GameObject tierLevels;
+    public Font onDone;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class Tier : MonoBehaviour {
             for (int i = 0; i < levelsLength; i++)
             {
                 Level _level = levels[i];
-                if (_level.tier == previousTier)
+                if (_level.tier == previousTier && _level.subject == Manager.subject)
                 {
                     previousTierStarCount = previousTierStarCount + _level.stars;
                 }
@@ -34,7 +35,13 @@ public class Tier : MonoBehaviour {
         }
 
         Text _text = transform.GetChild(0).GetComponent<Text>();
-        _text.text = tier == 0 ? "" : previousTierStarCount.ToString() + "/6";
+
+        if(tier == 0 || previousTierStarCount >= 6) {
+            _text.text = "-->";
+            _text.font = onDone;
+        } else {
+            _text.text = previousTierStarCount.ToString() + "/6";
+        }
 
         GameObject _tierLevels = Instantiate(tierLevels, Vector2.zero, Quaternion.identity, transform);
         RectTransform rt = _tierLevels.GetComponent<RectTransform>();
