@@ -6,6 +6,7 @@ public class StarManager : MonoBehaviour {
     Image[] stars;
     public int lives;
     int total;
+    public static StarManager instance;
 
     readonly Color32 lostStar = new Color32(133, 90, 90, 255);
     readonly Color32 wonStar = new Color32(255, 255, 255, 255);
@@ -15,7 +16,7 @@ public class StarManager : MonoBehaviour {
         UpdateStars();
     }
 
-    void UpdateStars() {
+    public void UpdateStars() {
         for (int i = 0; i < total; i++)
         {
             stars[i].color = lostStar;
@@ -26,8 +27,14 @@ public class StarManager : MonoBehaviour {
         }
     }
 
+    public void LooseAStar() {
+        lives--;
+        UpdateStars();
+    }
+
     private void Awake()
     {
+        instance = this;
         stars = transform.GetComponentsInChildren<Image>();
         lives = stars.Length;
         total = lives;

@@ -14,7 +14,7 @@ public class LevelButton : MonoBehaviour {
         Image image = gameObject.GetComponent<Image>();
         Text text = transform.GetChild(0).GetComponent<Text>();
         StarManager stars = transform.GetChild(1).GetComponent<StarManager>();
-        Level level = new Level(order, tier, 0, Manager.subject);
+        Level level = new Level(order, tier, 0, Manager.subject, false);
         bool locked = true;
         Level[] levels = Manager.levels.levels;
         int levelsLength = levels.Length;
@@ -53,6 +53,20 @@ public class LevelButton : MonoBehaviour {
         if (locked) {
             image.sprite = lockedImage;
             stars.SetLives(0);
+        } else if(level.time) {
+            switch(level.subject) {
+                case "a":
+                    image.sprite = Manager.instance.a_time;
+                    break;
+                case "g":
+                    image.sprite = Manager.instance.g_time;
+                    break;
+                case "n":
+                    image.sprite = Manager.instance.n_time;
+                    break;
+            }
+
+            stars.SetLives(level.stars);
         } else {
             image.sprite = unlockedImage;
             text.text = (order + 1).ToString();

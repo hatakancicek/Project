@@ -9,9 +9,12 @@ public class Countdown : MonoBehaviour {
 
     int _time;
     Text _text;
+    public bool timePerfect = true;
+    public static Countdown instance;
 
     private void Awake()
     {
+        instance = this;
         _text = gameObject.GetComponent<Text>();
         UpdateTime(time);
     }
@@ -25,7 +28,10 @@ public class Countdown : MonoBehaviour {
         string secondText = second >= 10 ? second.ToString() : "0" + second.ToString();
         _text.text = minuteText + ":" + secondText;
 
-        if (targetTime == 0) CancelInvoke();
+        if (targetTime == 0) {
+            timePerfect = false;
+            CancelInvoke();
+        }
     }
 
     // Use this for initialization
@@ -35,7 +41,6 @@ public class Countdown : MonoBehaviour {
 	
 	// Update is called once per frame
     void SecondPassed() {
-        print("Clock");
         UpdateTime(Mathf.Max(_time - 1, 0));
     }
 }
