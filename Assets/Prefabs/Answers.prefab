@@ -59,10 +59,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 0}
+  First1: {fileID: 0}
+  Second2: {fileID: 0}
+  Number1: {fileID: 0}
+  Number2: {fileID: 0}
+  Number3: {fileID: 0}
+  Number4: {fileID: 0}
   instance: {fileID: 0}
-  isFirstFalse: 1
-  score: 0
-  questionNumber: 0
+  score: {fileID: 0}
+  questionNumber: {fileID: 0}
   SceneNumber: 6
 --- !u!114 &114562397807109908
 MonoBehaviour:
@@ -136,7 +141,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bf10f10c2de5347da90787740c18b84d, type: 3}
+    m_Font: {fileID: 12800000, guid: 67b65398b583446d3b35ecc0791a4330, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
