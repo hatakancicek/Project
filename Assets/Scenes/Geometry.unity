@@ -396,30 +396,138 @@ MonoBehaviour:
     - color: green
       tile: t
     answer: 1
-  - time: 0
-    options: []
-    items: []
+  - time: 10
+    options:
+    - color: red
+      tile: c
+    - color: red
+      tile: s
+    - color: red
+      tile: t
+    items:
+    - color: red
+      tile: s
+    - color: red
+      tile: s
+    - color: red
+      tile: s
+    - color: red
+      tile: s
+    - color: red
+      tile: s
+    - color: red
+      tile: s
+    answer: 1
+  - time: 15
+    options:
+    - color: blue
+      tile: s
+    - color: blue
+      tile: t
+    - color: blue
+      tile: c
+    items:
+    - color: blue
+      tile: t
+    - color: blue
+      tile: c
+    - color: blue
+      tile: t
+    - color: blue
+      tile: t
+    - color: blue
+      tile: c
+    - color: blue
+      tile: t
+    answer: 2
+  - time: 20
+    options:
+    - color: green
+      tile: t
+    - color: green
+      tile: s
+    - color: green
+      tile: c
+    items:
+    - color: green
+      tile: t
+    - color: green
+      tile: c
+    - color: green
+      tile: s
+    - color: green
+      tile: c
+    - color: green
+      tile: s
+    - color: green
+      tile: t
+    answer: 0
+  - time: 10
+    options:
+    - color: green
+      tile: s
+    - color: blue
+      tile: t
+    - color: green
+      tile: t
+    items:
+    - color: blue
+      tile: s
+    - color: green
+      tile: t
+    - color: blue
+      tile: s
+    - color: blue
+      tile: s
+    - color: green
+      tile: t
+    - color: blue
+      tile: s
+    answer: 2
+  - time: 20
+    options:
+    - color: green
+      tile: s
+    - color: blue
+      tile: c
+    - color: green
+      tile: c
+    items:
+    - color: blue
+      tile: c
+    - color: green
+      tile: s
+    - color: blue
+      tile: c
+    - color: blue
+      tile: c
+    - color: green
+      tile: s
+    - color: blue
+      tile: c
     answer: 0
   - time: 0
-    options: []
-    items: []
-    answer: 0
-  - time: 0
-    options: []
-    items: []
-    answer: 0
-  - time: 0
-    options: []
-    items: []
-    answer: 0
-  - time: 0
-    options: []
-    items: []
-    answer: 0
-  - time: 0
-    options: []
-    items: []
-    answer: 0
+    options:
+    - color: red
+      tile: s
+    - color: blue
+      tile: t
+    - color: green
+      tile: c
+    items:
+    - color: green
+      tile: c
+    - color: blue
+      tile: t
+    - color: red
+      tile: s
+    - color: blue
+      tile: t
+    - color: red
+      tile: s
+    - color: green
+      tile: c
+    answer: 2
 --- !u!114 &350438131
 MonoBehaviour:
   m_ObjectHideFlags: 0
