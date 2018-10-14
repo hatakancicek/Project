@@ -56,7 +56,6 @@ public class Manager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         sound = PlayerPrefs.GetInt("sound", 0);
-
         string _achievements = PlayerPrefs.GetString("achievements", "{\"achievements\":[]}");
         achievements = JsonUtility.FromJson<Achievements> (_achievements);
         if (achievements.achievements == null) achievements.achievements = new string[0];
@@ -65,11 +64,11 @@ public class Manager : MonoBehaviour {
         levels = JsonUtility.FromJson<Levels>(_levels);
 
         if (levels.levels == null) levels.levels = new Level[0];
-
         SceneManager.LoadScene(1);
         Sound.instance.GetComponent<AudioSource>().mute |= sound != 1;
 
-        FinishLevel(0, 0, 3, "g", false);
+        
+
     }
 
     public void OpenAchievement(string _subject, string _id) {

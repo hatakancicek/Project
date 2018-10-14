@@ -28,7 +28,7 @@ public class StarManager : MonoBehaviour {
     }
 
     public void LooseAStar() {
-        lives--;
+        if(lives!=0) lives--;
         UpdateStars();
     }
 
