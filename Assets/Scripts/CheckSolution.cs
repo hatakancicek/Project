@@ -5,34 +5,83 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 
-public class CheckSolution : MonoBehaviour {
+public class CheckSolution : MonoBehaviour
+{
     public GameObject Answer;
+    public GameObject First1;
+    public GameObject Second2;
+    public GameObject Number1;
+    public GameObject Number2;
+    public GameObject Number3;
+    public GameObject Number4;
+    
     public StarManager instance;
     public ScoreChange score;
     public ScoreChange questionNumber;
-    public bool isFirstFalse=true;
+    public bool isFirstFalse = true;
     public int SceneNumber;
     //static public CheckSolution GameObject;
-	// Use this for initialization
-	public void Check () {
+    // Use this for initialization
+    public void Check()
+    {
+        int option1;
+        int option2;
+        int answer;
+        int randomNumber1=0;
+        int randomNumber2=0;
+        int randomOption1=0;
+        int randomOption2=0;
+        int randomOption3=0;
+        int randomOption4=0;
+        int[] liste = {  randomNumber1,  randomNumber2,  randomOption1,  randomOption2, randomOption3, randomOption4 };
         string trueAnswer = Answer.GetComponent<Text>().text;
         Answer.GetComponent<Text>().enabled = true;
         if (trueAnswer != GetComponent<Text>().text)
         {
-            print("false");
             instance.LooseAStar();
             isFirstFalse = false;
             Answer.GetComponent<Text>().enabled = true;
         }
-        else
-        {
-            print("true");
-            score.increaseScore();
-            print(score.score);
-        }
+        else score.increaseScore();
         questionNumber.increaseScore();
-        print(questionNumber.score);
-        //randomize options
+        int option = UnityEngine.Random.Range(0, 4);
+        for(int i=0;i<6; i++)
+        {
+            int j ;
+            
+            if (i == 0) liste[i] = UnityEngine.Random.Range(0, 40);
+            else
+            {
+                for (j = 0; j < i; j++)
+                {
+                    liste[i]= UnityEngine.Random.Range(0, 40);
+                    while (liste[i] == liste[j])
+                    {
+                        liste[i] = UnityEngine.Random.Range(0, 40);
+                        j = 0;
+                    }
+                }
+            }
+            print(liste[i]);
+
+
+
+        }
+        Number1.GetComponent<Text>().text = liste[0].ToString();
+        Number2.GetComponent<Text>().text = liste[1].ToString();
+        Number3.GetComponent<Text>().text = liste[2].ToString();
+        Number4.GetComponent<Text>().text = liste[3].ToString();
+        First1.GetComponent<Text>().text = liste[4].ToString();
+        Second2.GetComponent<Text>().text = liste[5].ToString();
+        int.TryParse(First1.GetComponent<Text>().text, out option1);
+        int.TryParse(Second2.GetComponent<Text>().text, out option2);
+        answer = option1 + option2;
+        Answer.GetComponent<Text>().text = answer.ToString();
+        Answer.GetComponent<Text>().enabled = false;
+        if (option == 0) Number1.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+        else if (option == 1) Number2.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+        else if (option == 2) Number3.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+        else if (option == 3) Number4.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
     }
-	
+
 }

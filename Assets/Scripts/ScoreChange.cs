@@ -16,7 +16,7 @@ public class ScoreChange : MonoBehaviour {
         int.TryParse(GetComponent<Text>().text, out score);
         score++;
         GetComponent<Text>().text = score.ToString();
-        if (GetComponent<Text>().text == "9")
+        if (GetComponent<Text>().text == "99")
         {
             
             SceneManager.LoadScene(SceneNumber);
