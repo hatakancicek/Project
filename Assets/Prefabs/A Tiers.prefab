@@ -9,48 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1449219459222334}
+  m_RootGameObject: {fileID: 1742487497106902}
   m_IsPrefabAsset: 1
---- !u!1 &1449219459222334
+--- !u!1 &1742487497106902
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224690938719898988}
-  - component: {fileID: 114660578407010792}
+  - component: {fileID: 224894253504546792}
+  - component: {fileID: 114813009224731668}
   m_Layer: 5
-  m_Name: Tier Levels
+  m_Name: A Tiers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114660578407010792
+--- !u!114 &114813009224731668
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449219459222334}
+  m_GameObject: {fileID: 1742487497106902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a647e497fc4d426cb0eeab0548c2016, type: 3}
+  m_Script: {fileID: 11500000, guid: 06cb6dec2cf01450aa6f2c018321f41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tier: 0
-  previousTierStars: 0
-  locked: {fileID: 0}
-  unlocked: {fileID: 0}
-  numberOfLevels: 3
-  level: {fileID: 1757980830212404, guid: 040c07ee5e94c46cc87f19127f24a4e6, type: 2}
---- !u!224 &224690938719898988
+  locked: {fileID: 21300118, guid: 66e9c80335fb4584e9bb6f0319900f4b, type: 3}
+  unlocked: {fileID: 21300014, guid: 61ad2efec602ac34eb709c6338e9d84b, type: 3}
+  tier: {fileID: 1789616113998150, guid: 2ff24189d1b484c07973dfa02f7f1363, type: 2}
+  numberOfTiers: 3
+--- !u!224 &224894253504546792
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449219459222334}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 1742487497106902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -59,6 +57,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

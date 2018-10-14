@@ -8,7 +8,10 @@ public class Navigate : MonoBehaviour {
 
     void NavigatePlaySceene()
     {
+
         if (subject != "") Manager.subject = subject;
+
+       
         SceneManager.LoadScene(SceneNumber);
     }
 

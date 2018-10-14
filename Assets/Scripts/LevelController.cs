@@ -16,7 +16,8 @@ public class LevelController : MonoBehaviour {
         bool time = Countdown.instance.timePerfect;
         int stars = StarManager.instance.lives;
 
-        Manager.instance.FinishLevel(current.order, 
+
+  Manager.instance.FinishLevel(current.order, 
                                      current.tier, 
                                      stars, 
                                      current.subject, 

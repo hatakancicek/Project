@@ -107,8 +107,10 @@ GameObject:
   - component: {fileID: 114198024742386196}
   - component: {fileID: 114038161000128088}
   - component: {fileID: 114928060622822340}
+  - component: {fileID: 114704424428977374}
+  - component: {fileID: 114512329977577102}
   m_Layer: 5
-  m_Name: Level
+  m_Name: A Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +154,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114198024742386196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114704424428977374}
+        m_MethodName: SetLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114178948386905522
@@ -280,6 +293,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b94c99f963d844f38ede6ee48204576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lives: 0
+--- !u!114 &114512329977577102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757980830212404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b126f9e34f974d169ca87e45dc40103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneNumber: 8
+  subject: a
 --- !u!114 &114596769772224236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,6 +334,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114704424428977374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757980830212404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614d72a5c273d4b82ac6875664b1f2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lb: {fileID: 114928060622822340}
 --- !u!114 &114928060622822340
 MonoBehaviour:
   m_ObjectHideFlags: 1

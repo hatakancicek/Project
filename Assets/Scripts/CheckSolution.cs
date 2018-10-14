@@ -17,16 +17,12 @@ public class CheckSolution : MonoBehaviour {
 	public void Check () {
         string trueAnswer = Answer.GetComponent<Text>().text;
         Answer.GetComponent<Text>().enabled = true;
-        if (trueAnswer != GetComponent<Text>().text&&isFirstFalse)
+        if (trueAnswer != GetComponent<Text>().text)
         {
             print("false");
             instance.LooseAStar();
             isFirstFalse = false;
             Answer.GetComponent<Text>().enabled = true;
-        }
-        else if(trueAnswer != GetComponent<Text>().text)
-        {
-            print("false111");
         }
         else
         {
