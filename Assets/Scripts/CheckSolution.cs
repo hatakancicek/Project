@@ -13,41 +13,41 @@ public class CheckSolution : MonoBehaviour
     public GameObject Number2;
     public GameObject Number3;
     public GameObject Number4;
-    
+
     public StarManager instance;
     public ScoreChange score;
     public ScoreChange questionNumber;
     public int SceneNumber;
     //static public CheckSolution GameObject;
     // Use this for initialization
-     private void Start()
-     {
-         Check();
-         Answer.GetComponent<Text>().enabled = false;
+    private void Start()
+    {
+        Check();
+        Answer.GetComponent<Text>().enabled = false;
 
-     }
+    }
     public void Check()
     {
         int option1;
         int option2;
         int answer;
-        int randomNumber1=0;
-        int randomNumber2=0;
-        int randomOption1=0;
-        int randomOption2=0;
-        int randomOption3=0;
-        int randomOption4=0;
-        int[] liste = {  randomNumber1,  randomNumber2,  randomOption1,  randomOption2, randomOption3, randomOption4 };
+        int randomNumber1 = 0;
+        int randomNumber2 = 0;
+        int randomOption1 = 0;
+        int randomOption2 = 0;
+        int randomOption3 = 0;
+        int randomOption4 = 0;
+        int[] liste = { randomNumber1, randomNumber2, randomOption1, randomOption2, randomOption3, randomOption4 };
         int option = UnityEngine.Random.Range(0, 4);
-        for(int i=0;i<6; i++)
+        for (int i = 0; i < 6; i++)
         {
-            int j ;
+            int j;
             if (i == 0) liste[i] = UnityEngine.Random.Range(0, 40);
             else
             {
                 for (j = 0; j < i; j++)
                 {
-                    liste[i]= UnityEngine.Random.Range(0, 40);
+                    liste[i] = UnityEngine.Random.Range(0, 40);
                     while (liste[i] == liste[j])
                     {
                         liste[i] = UnityEngine.Random.Range(0, 40);
@@ -55,7 +55,6 @@ public class CheckSolution : MonoBehaviour
                     }
                 }
             }
-            print(liste[i]);
         }
         Number1.GetComponent<Text>().text = liste[0].ToString();
         Number2.GetComponent<Text>().text = liste[1].ToString();
@@ -85,5 +84,6 @@ public class CheckSolution : MonoBehaviour
         int.TryParse(Second2.GetComponent<Text>().text, out option2);
         answer = option1 + option2;
         Answer.GetComponent<Text>().text = answer.ToString();
+        Check();
     }
 }

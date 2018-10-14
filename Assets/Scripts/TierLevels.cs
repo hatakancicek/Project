@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class TierLevels : MonoBehaviour {
+public class TierLevels : MonoBehaviour
+{
 
     public int tier;
     public int previousTierStars;

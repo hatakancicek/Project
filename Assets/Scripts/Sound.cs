@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class Sound : MonoBehaviour {
+public class Sound : MonoBehaviour
+{
     public static Sound instance;
 
     private void Awake()

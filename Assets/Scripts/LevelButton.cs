@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelButton : MonoBehaviour {
+public class LevelButton : MonoBehaviour
+{
 
     public int order;
     public int tier;
@@ -20,10 +21,14 @@ public class LevelButton : MonoBehaviour {
         int levelsLength = levels.Length;
         int previousLevelOrder = order - 1;
 
-        if(previousTierStarCount >= 6) {
-            if(order == 0) {
+        if (previousTierStarCount >= 6)
+        {
+            if (order == 0)
+            {
                 locked = false;
-            } else {
+            }
+            else
+            {
                 for (int i = 0; i < levelsLength; i++)
                 {
                     Level _level = levels[i];
@@ -50,12 +55,16 @@ public class LevelButton : MonoBehaviour {
             }
         }
 
-        if (locked) {
+        if (locked)
+        {
             image.sprite = lockedImage;
             stars.SetLives(0);
             gameObject.GetComponent<Button>().enabled = false;
-        } else if(level.time) {
-            switch(level.subject) {
+        }
+        else if (level.time)
+        {
+            switch (level.subject)
+            {
                 case "a":
                     image.sprite = Manager.instance.a_time;
                     break;
@@ -68,7 +77,9 @@ public class LevelButton : MonoBehaviour {
             }
 
             stars.SetLives(level.stars);
-        } else {
+        }
+        else
+        {
             image.sprite = unlockedImage;
             text.text = (order + 1).ToString();
             stars.SetLives(level.stars);

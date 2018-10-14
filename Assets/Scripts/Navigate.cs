@@ -2,7 +2,8 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Navigate : MonoBehaviour {
+public class Navigate : MonoBehaviour
+{
     public int SceneNumber;
     public string subject;
 
@@ -11,7 +12,7 @@ public class Navigate : MonoBehaviour {
 
         if (subject != "") Manager.subject = subject;
 
-       
+
         SceneManager.LoadScene(SceneNumber);
     }
 

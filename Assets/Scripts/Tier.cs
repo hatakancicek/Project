@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Tier : MonoBehaviour {
+public class Tier : MonoBehaviour
+{
 
     public Sprite locked;
     public Sprite unlocked;
@@ -36,10 +37,13 @@ public class Tier : MonoBehaviour {
 
         Text _text = transform.GetChild(0).GetComponent<Text>();
 
-        if(tier == 0 || previousTierStarCount >= 6) {
+        if (tier == 0 || previousTierStarCount >= 6)
+        {
             _text.text = "-->";
             _text.font = onDone;
-        } else {
+        }
+        else
+        {
             _text.text = previousTierStarCount.ToString() + "/6";
         }
 

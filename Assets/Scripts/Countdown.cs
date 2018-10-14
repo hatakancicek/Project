@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Countdown : MonoBehaviour {
+public class Countdown : MonoBehaviour
+{
 
     public int time;
 
@@ -17,7 +18,8 @@ public class Countdown : MonoBehaviour {
         UpdateTime(time);
     }
 
-    void UpdateTime(int targetTime) {
+    void UpdateTime(int targetTime)
+    {
 
         _time = targetTime;
         int minute = (int)Mathf.Floor(targetTime / 60);
@@ -26,19 +28,22 @@ public class Countdown : MonoBehaviour {
         string secondText = second >= 10 ? second.ToString() : "0" + second.ToString();
         _text.text = minuteText + ":" + secondText;
 
-        if (targetTime == 0) {
+        if (targetTime == 0)
+        {
             timePerfect = false;
             CancelInvoke();
         }
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         InvokeRepeating("SecondPassed", 0.0f, 1f);
     }
-	
-	// Update is called once per frame
-    void SecondPassed() {
+
+    // Update is called once per frame
+    void SecondPassed()
+    {
         UpdateTime(Mathf.Max(_time - 1, 0));
     }
 }

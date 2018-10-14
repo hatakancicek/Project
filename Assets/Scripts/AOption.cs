@@ -1,13 +1,14 @@
 ﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class AOption : MonoBehaviour {
+public class AOption : MonoBehaviour
+{
 
     public bool isTrue;
 
-	// Use this for initialization
     void Start()
     {
         Button button = gameObject.GetComponent<Button>();
@@ -25,7 +26,6 @@ public class AOption : MonoBehaviour {
 
     public void trueAnswer()
     {
-        print("lel");
         SceneManager.LoadScene(4);
     }
 
@@ -33,8 +33,4 @@ public class AOption : MonoBehaviour {
     {
 
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

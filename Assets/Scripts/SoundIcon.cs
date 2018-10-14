@@ -15,11 +15,12 @@ public class SoundIcon : MonoBehaviour
         _image.sprite = _sound ? sound : noSound;
         Button button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(ToggleSound);
-        
+
         player = Sound.instance.GetComponent<AudioSource>();
     }
 
-    void ToggleSound(){
+    void ToggleSound()
+    {
         _sound = !_sound;
         _image.sprite = _sound ? sound : noSound;
         player.mute = !_sound;

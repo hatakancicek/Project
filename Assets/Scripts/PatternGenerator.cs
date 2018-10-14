@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PatternGenerator : MonoBehaviour {
+public class PatternGenerator : MonoBehaviour
+{
 
     public GameObject Circle;
     public GameObject Triangle;
@@ -35,15 +36,18 @@ public class PatternGenerator : MonoBehaviour {
         int order = Manager.currentLevel.order + (Manager.currentLevel.tier * 3);
         LevelData data = levels[order];
 
-        for (int i = 0; i < data.items.Length; i++) {
+        for (int i = 0; i < data.items.Length; i++)
+        {
             Tile t = data.items[i];
-            switch (t.tile) {
+            switch (t.tile)
+            {
                 case "c":
                     GameObject cItem = Instantiate(Circle, Vector2.zero, Quaternion.identity, transform) as GameObject;
                     cItem.GetComponent<RectTransform>().localPosition = new Vector2(-390 + ((i > 2 ? i + 1 : i) * 130), 0);
-                    for (int j = 0; j < colors.Length; j++) {
+                    for (int j = 0; j < colors.Length; j++)
+                    {
                         ColorWrapper cw = colors[j];
-                        if(cw.id == t.color) cItem.GetComponent<Image>().color = cw.color;
+                        if (cw.id == t.color) cItem.GetComponent<Image>().color = cw.color;
                     }
 
                     break;
@@ -135,7 +139,8 @@ public class PatternGenerator : MonoBehaviour {
         }
     }
 
-    void Answer(int answer, GameObject go) {
+    void Answer(int answer, GameObject go)
+    {
         bool isTrue = answer == go.transform.GetSiblingIndex() - 6;
 
         if (isTrue)
@@ -143,7 +148,8 @@ public class PatternGenerator : MonoBehaviour {
             LevelController.instance.FinishLevel();
             SceneManager.LoadScene(5);
         }
-        else {
+        else
+        {
             StarManager.instance.LooseAStar();
             go.SetActive(false);
         }
