@@ -1,7 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class Tile : MonoBehaviour
+﻿[System.Serializable]
+public class Tile
 {
     public string color;
     public string tile;
