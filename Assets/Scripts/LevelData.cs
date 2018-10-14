@@ -1,7 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class LevelData : MonoBehaviour
+﻿[System.Serializable]
+public class LevelData
 {
     public int time;
     public Tile[] options;

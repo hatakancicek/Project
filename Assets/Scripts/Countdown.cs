@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour {
@@ -11,7 +9,6 @@ public class Countdown : MonoBehaviour {
     Text _text;
     public bool timePerfect = true;
     public static Countdown instance;
-    public StarManager instance1;
 
     private void Awake()
     {
@@ -31,7 +28,6 @@ public class Countdown : MonoBehaviour {
 
         if (targetTime == 0) {
             timePerfect = false;
-            instance1.LooseAStar();
             CancelInvoke();
         }
     }

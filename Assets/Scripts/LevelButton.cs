@@ -53,6 +53,7 @@ public class LevelButton : MonoBehaviour {
         if (locked) {
             image.sprite = lockedImage;
             stars.SetLives(0);
+            gameObject.GetComponent<Button>().enabled = false;
         } else if(level.time) {
             switch(level.subject) {
                 case "a":

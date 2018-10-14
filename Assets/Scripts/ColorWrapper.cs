@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class ColorWrapper : MonoBehaviour
+public class ColorWrapper
 {
     public string id;
     public Color32 color;
