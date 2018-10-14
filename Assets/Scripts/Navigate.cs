@@ -14,6 +14,7 @@ public class Navigate : MonoBehaviour {
 
     private void Start()
     {
+
         Button button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(NavigatePlaySceene);
     }
