@@ -13,13 +13,11 @@ public class CheckSolution : MonoBehaviour
     public GameObject Number2;
     public GameObject Number3;
     public GameObject Number4;
-
     public StarManager instance;
     public ScoreChange score;
     public ScoreChange questionNumber;
     public int SceneNumber;
-    //static public CheckSolution GameObject;
-    // Use this for initialization
+
     private void Start()
     {
         Check();
@@ -31,6 +29,7 @@ public class CheckSolution : MonoBehaviour
         int option1;
         int option2;
         int answer;
+        bool answerInSolution = false;
         int randomNumber1 = 0;
         int randomNumber2 = 0;
         int randomOption1 = 0;
@@ -66,10 +65,19 @@ public class CheckSolution : MonoBehaviour
         int.TryParse(Second2.GetComponent<Text>().text, out option2);
         answer = option1 + option2;
         Answer.GetComponent<Text>().text = answer.ToString();
-        if (option == 0) Number1.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
-        else if (option == 1) Number2.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
-        else if (option == 2) Number3.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
-        else if (option == 3) Number4.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+        for (int k = 2; k < 5; k++)
+        {
+            print(k);
+            if (liste[k] == answer) answerInSolution = true;
+        }
+        if (!answerInSolution)
+        {
+            if (option == 0) Number1.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+            else if (option == 1) Number2.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+            else if (option == 2) Number3.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+            else if (option == 3) Number4.GetComponent<Text>().text = Answer.GetComponent<Text>().text;
+        }
+
     }
     public void CheckIfTrue()
     {
