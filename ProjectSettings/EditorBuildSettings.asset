@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Entry.unity
     guid: 54e600c80a6714b65810265ded412268
@@ -35,19 +29,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Geometry.unity
     guid: ed119d60d77f04dd8a585a12d857992f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Numbers.unity
     guid: 344270e03b01d7246827108fce8b6aff
   - enabled: 1
-    path: Assets/Scenes/Algebre.unity
-    guid: 712d94fbc21c94757bbdce0a5373067c
+    path: Assets/Scenes/A Levels/A Level 1.unity
+    guid: 6ade8acedf199be489e961101ce58589
   - enabled: 1
-    path: Assets/Scenes/A Level 2.unity
+    path: Assets/Scenes/A Levels/A Level 2.unity
     guid: 2c6ac05f24e57774293a5e7a23bf4b09
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 3.unity
+    guid: d493e60d09104504e8d3a48a46435460
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 4.unity
+    guid: ff1e52ee8bb595148b2db7545dd7bca7
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 5.unity
+    guid: bb06c51dd6a93694f89c77f666aab87f
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 6.unity
+    guid: 9683e0fe3a0c5ec4797152eab31e8b06
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 7.unity
+    guid: c217995abc3167a40aa18a84616ac3ac
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 8.unity
+    guid: a778cba0e25ab1c44b013ba2e3925703
+  - enabled: 1
+    path: Assets/Scenes/A Levels/A Level 9.unity
+    guid: d03dcb1d3ddea0b42a639b79eaebb195
   m_configObjects: {}
