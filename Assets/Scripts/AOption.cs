@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class AOption : MonoBehaviour
 {
-
+    public StarManager instance;
     public bool isTrue;
 
     void Start()
@@ -31,6 +31,6 @@ public class AOption : MonoBehaviour
 
     public void falseAnswer()
     {
-
+        instance.LooseAStar();
     }
 }
