@@ -30,6 +30,8 @@ public class CheckSolution : MonoBehaviour
         int option2;
         int answer;
         bool answerInSolution = false;
+        int randomizer = (Manager.currentLevel.tier + 1) * 20;
+        int j;
         int randomNumber1 = 0;
         int randomNumber2 = 0;
         int randomOption1 = 0;
@@ -38,36 +40,51 @@ public class CheckSolution : MonoBehaviour
         int randomOption4 = 0;
         int[] liste = { randomNumber1, randomNumber2, randomOption1, randomOption2, randomOption3, randomOption4 };
         int option = UnityEngine.Random.Range(0, 4);
-        for (int i = 0; i < 6; i++)
+        liste[0] = UnityEngine.Random.Range(0, randomizer);
+        do
         {
-            int j;
-            if (i == 0) liste[i] = UnityEngine.Random.Range(0, 40);
-            else
-            {
-                for (j = 0; j < i; j++)
-                {
-                    liste[i] = UnityEngine.Random.Range(0, 40);
-                    while (liste[i] == liste[j])
-                    {
-                        liste[i] = UnityEngine.Random.Range(0, 40);
-                        j = 0;
-                    }
-                }
-            }
-        }
-        Number1.GetComponent<Text>().text = liste[0].ToString();
-        Number2.GetComponent<Text>().text = liste[1].ToString();
-        Number3.GetComponent<Text>().text = liste[2].ToString();
-        Number4.GetComponent<Text>().text = liste[3].ToString();
-        First1.GetComponent<Text>().text = liste[4].ToString();
-        Second2.GetComponent<Text>().text = liste[5].ToString();
+            liste[1] = UnityEngine.Random.Range(0, randomizer);
+        } while (liste[0] == liste[1]||(liste[0] + liste[1])<4);
+        
+            First1.GetComponent<Text>().text = liste[0].ToString();
+        Second2.GetComponent<Text>().text = liste[1].ToString();
         int.TryParse(First1.GetComponent<Text>().text, out option1);
         int.TryParse(Second2.GetComponent<Text>().text, out option2);
         answer = option1 + option2;
-        Answer.GetComponent<Text>().text = answer.ToString();
-        for (int k = 2; k < 5; k++)
+        int optionRandomizer = answer / 2;
+        for (int i = 2; i < 6; i++)
         {
-            print(k);
+            liste[i] = UnityEngine.Random.Range(optionRandomizer, 3 * optionRandomizer);
+        }
+        for (int i = 2; i < 6; i++)
+        {
+            for (j = 2; j < i; j++)
+            {
+                while (liste[i] == liste[j])
+                {
+                    print(liste[2]);
+                    print(liste[3]);
+                    print(liste[4]);
+                    print(liste[5]);
+                    liste[i] = UnityEngine.Random.Range(optionRandomizer, 3*optionRandomizer);
+                    j = 2;
+                    print(liste[2]);
+                    print(liste[3]);
+                    print(liste[4]);
+                    print(liste[5]);
+                }
+            }
+
+        }
+        
+        Number1.GetComponent<Text>().text = liste[2].ToString();
+        Number2.GetComponent<Text>().text = liste[3].ToString();
+        Number3.GetComponent<Text>().text = liste[4].ToString();
+        Number4.GetComponent<Text>().text = liste[5].ToString();
+        
+        Answer.GetComponent<Text>().text = answer.ToString();
+        for (int k = 2; k < 6; k++)
+        {
             if (liste[k] == answer) answerInSolution = true;
         }
         if (!answerInSolution)
