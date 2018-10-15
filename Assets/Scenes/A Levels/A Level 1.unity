@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b126f9e34f974d169ca87e45dc40103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 1
+  SceneNumber: 4
   subject: 
 --- !u!114 &40590523
 MonoBehaviour:
@@ -1958,7 +1958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554930891}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Answers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2797,7 +2797,6 @@ GameObject:
   - component: {fileID: 2140347979}
   - component: {fileID: 2140347978}
   - component: {fileID: 2140347977}
-  - component: {fileID: 2140347976}
   m_Layer: 5
   m_Name: Back Shadow
   m_TagString: Untagged
@@ -2823,19 +2822,6 @@ RectTransform:
   m_AnchoredPosition: {x: 200.00006, y: -200.00003}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2140347976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140347974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b126f9e34f974d169ca87e45dc40103, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneNumber: 1
-  subject: 
 --- !u!114 &2140347977
 MonoBehaviour:
   m_ObjectHideFlags: 0
