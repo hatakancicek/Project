@@ -6,7 +6,6 @@ public class LevelNavigator : MonoBehaviour
 {
     public LevelButton lb1;
     public int LevelNumber;
-    public string subject;
 
     void NavigatePlaySceene()
     {
