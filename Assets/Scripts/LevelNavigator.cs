@@ -9,7 +9,7 @@ public class LevelNavigator : MonoBehaviour
 
     void NavigatePlaySceene()
     {
-       SceneManager.LoadScene(LevelNumber+lb1.order+lb1.tier);
+       SceneManager.LoadScene(LevelNumber+lb1.order+ 3 * lb1.tier);
     }
 
     private void Start()
